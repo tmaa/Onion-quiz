@@ -1,0 +1,21 @@
+body, html{
+    background-color: #006A3E;
+    margin: 0 0 0 0;
+}
+.top-div{
+    background-color: #2390bb;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 2% 0 2% 0;
+}
+.middle-div{
+    background-color: violet;
+    width: auto;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.bottom-div{
+    background-color: bisque;
+    text-align: center;
+}
