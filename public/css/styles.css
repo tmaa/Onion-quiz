@@ -5,7 +5,8 @@ body, html{
 .top-div{
     background-color: #2390bb;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5em;
     padding: 2% 0 2% 0;
 }
 .middle-div{
