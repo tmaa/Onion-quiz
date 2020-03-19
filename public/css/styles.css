@@ -7,7 +7,7 @@ body, html{
     text-align: center;
     font-family: 'Lobster', cursive;
     font-size: 1.5em;
-    padding: 2% 0 2% 0;
+    padding: 2% 0 7% 0;
 }
 .middle-div{
     background-color: violet;
@@ -17,6 +17,53 @@ body, html{
     padding-bottom: 5%;
 }
 .bottom-div{
+    padding-top: 2%;
+    padding-bottom: 2%;
     background-color: bisque;
     text-align: center;
+}
+#correct-button{
+	background-color:#44c767;
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+    text-decoration:none;
+    margin-right: 120px;
+    width: 200px;
+    height: 120px;
+}
+#correct-button:hover {
+	background-color:#5cbf2a;
+}
+#correct-button:active {
+	position:relative;
+	top:1px;
+}
+#correct-button:focus{
+    outline: none;
+}
+#wrong-button{
+	background-color: rgb(146, 61, 61);
+	border-radius:28px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:20px;
+    text-decoration:none;
+    width: 200px;
+    height: 120px;
+}
+#wrong-button:hover {
+	background-color:#c07723;
+}
+#wrong-button:active {
+	position:relative;
+	top:1px;
+}
+#wrong-button:focus{
+    outline: none;
 }
