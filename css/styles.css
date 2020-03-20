@@ -6,28 +6,31 @@ body, html{
     display: none;
 }
 #top-div{
-    background-color: #2390bb;
+    /* background-color: #2390bb; */
     text-align: center;
     font-family: 'Press Start 2P', cursive;
-    font-size: 1.9em;
+    font-size: 1.7em;
     color: white;
-    padding: 2% 0 7% 0;
+    padding-top: 2%;
 }
 #middle-div{
-    background-color: violet;
+    /* background-color: violet; */
     width: auto;
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9pt;
+    color: white;
 }
 #bottom-div{
+    /* background-color: bisque; */
     padding-top: 2%;
     padding-bottom: 2%;
-    background-color: bisque;
     text-align: center;
 }
 #start-div{
-    background-color: crimson;
+    /* background-color: crimson; */
     width: 100%;
     height: 300px;
     display: flex;
@@ -41,7 +44,8 @@ body, html{
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:20px;
+    font-size:20px;
+    font-family: 'Press Start 2P', cursive;
     text-decoration:none;
     margin-right: 120px;
     width: 200px;
@@ -56,7 +60,8 @@ body, html{
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
-	font-family:Arial;
+    font-family:Arial;
+    font-family: 'Press Start 2P', cursive;
 	font-size:20px;
     text-decoration:none;
     width: 200px;

@@ -2,49 +2,63 @@ var gameStarted = false;
 var subreddits = ["TheOnion", "nottheonion"];
 var newHeadline = "";
 var retrievedSubreddit = "";
+var tries = 3;
 
-$("#start-button").on("click", function () {
-   $("#start-div").hide();
-   var randNum = Math.random() < 0.5 ? 0 : 1;;
-   var randNUm2 = Math.floor(Math.random() * (24 - 0 + 1)) + 0;
+function makeApiCall(url, randNum, randNum2) {
+   console.log(url);
 
-   var api_url = "https://www.reddit.com/r/" + subreddits[randNum] + "/new.json?sort=popular";
-   
-   console.log(api_url);
-
-   $.ajax(api_url,   // request url
+   $.ajax(url,   // request url
    {
       success: function (data, status, xhr) {    // success callback function
-            console.log(data.data.children[randNUm2].data.title);
-
-            newHeadline = data.data.children[randNUm2].data.title;
+            newHeadline = data.data.children[randNum2].data.title;
             retrievedSubreddit = data.data.children[randNum].data.subreddit;
 
             $("#article-headline").text(newHeadline);
       }
    });
+}
 
+$("#start-button").on("click", function () {
+   $("#start-div").hide();
+
+   var randNum = Math.random() < 0.5 ? 0 : 1;;
+   var randNum2 = Math.floor(Math.random() * (24 - 0 + 1)) + 0;
+
+   var api_url = "https://www.reddit.com/r/" + subreddits[randNum] + "/new.json?sort=popular";
+   makeApiCall(api_url, randNum, randNum2);
 
    $("#middle-div").removeClass("hidden");
    $("#bottom-div").removeClass("hidden");
+   $("#tries").removeClass("hidden");
+   $("#tries").text("Tries: 3");
 });
 
+
 $("#correct-button").on("click", function () {
-   console.log(newHeadline);
-   console.log(retrievedSubreddit);
    if(retrievedSubreddit === "TheOnion"){
       console.log("Correct");
+      var randNum = Math.random() < 0.5 ? 0 : 1;;
+      var randNum2 = Math.floor(Math.random() * (24 - 0 + 1)) + 0;
+   
+      var api_url = "https://www.reddit.com/r/" + subreddits[randNum] + "/new.json?sort=popular";
+      makeApiCall(api_url, randNum, randNum2);
    }else{
+      tries--;
       console.log("Wrong");
+      $("#tries").text("Tries: " + tries);
    }
 });
 
 $("#wrong-button").on("click", function () {
-   console.log(newHeadline);
-   console.log(retrievedSubreddit);
    if(retrievedSubreddit === "nottheonion"){
       console.log("Correct");
+      var randNum = Math.random() < 0.5 ? 0 : 1;;
+      var randNum2 = Math.floor(Math.random() * (24 - 0 + 1)) + 0;
+   
+      var api_url = "https://www.reddit.com/r/" + subreddits[randNum] + "/new.json?sort=popular";
+      makeApiCall(api_url, randNum, randNum2);
    }else{
+      tries--;
       console.log("Wrong");
-   }
+      $("#tries").text("Tries: " + tries);   }
 });
