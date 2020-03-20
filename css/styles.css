@@ -2,11 +2,15 @@ body, html{
     background-color: #006A3E;
     margin: 0 0 0 0;
 }
+.hidden{
+    display: none;
+}
 #top-div{
     background-color: #2390bb;
     text-align: center;
-    font-family: 'Lobster', cursive;
-    font-size: 1.5em;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.9em;
+    color: white;
     padding: 2% 0 7% 0;
 }
 #middle-div{
@@ -21,6 +25,14 @@ body, html{
     padding-bottom: 2%;
     background-color: bisque;
     text-align: center;
+}
+#start-div{
+    background-color: crimson;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #correct-button{
 	background-color:#44c767;
@@ -38,13 +50,6 @@ body, html{
 #correct-button:hover {
 	background-color:#5cbf2a;
 }
-#correct-button:active {
-	position:relative;
-	top:1px;
-}
-#correct-button:focus{
-    outline: none;
-}
 #wrong-button{
 	background-color: rgb(146, 61, 61);
 	border-radius:28px;
@@ -60,10 +65,30 @@ body, html{
 #wrong-button:hover {
 	background-color:#c07723;
 }
-#wrong-button:active {
+#wrong-button:active, #correct-button:active{
 	position:relative;
 	top:1px;
 }
-#wrong-button:focus{
+#wrong-button:focus, #start-button:focus, #correct-button:focus{
     outline: none;
+}
+#start-button{
+    font-size: 30pt;
+    text-align: center;
+	display: inline-block;
+	margin:5px;
+    font-weight: bold;
+    padding: 30px 30px 30px 30px ;
+    background-color: rgb(211, 211, 211);
+    text-shadow: -1px -1px black, 1px 1px white;
+    color:#006A3E;
+    font-family: 'Press Start 2P', cursive;
+	border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+}
+#start-button:active {
+	box-shadow: none;
+	position: relative;
+	top: .2em;
 }

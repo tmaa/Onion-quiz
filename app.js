@@ -1,4 +1,8 @@
+var gameStarted = false;
 
-$("#correct-button").on("click", function () {
-   $("h1").fadeOut();
+
+$("#start-button").on("click", function () {
+   $("#start-div").hide();
+   $("#middle-div").removeClass("hidden");
+   $("#bottom-div").removeClass("hidden");
 });
