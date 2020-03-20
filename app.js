@@ -3,6 +3,7 @@ var subreddits = ["TheOnion", "nottheonion"];
 var newHeadline = "";
 var retrievedSubreddit = "";
 var tries = 3;
+var score = 0;
 
 function makeApiCall(url, randNum, randNum2) {
    console.log(url);
@@ -30,6 +31,9 @@ $("#start-button").on("click", function () {
    $("#middle-div").removeClass("hidden");
    $("#bottom-div").removeClass("hidden");
    $("#tries").removeClass("hidden");
+   $("#score").removeClass("hidden");
+
+   $("#score").text("Score: 0");
    $("#tries").text("Tries: 3");
 });
 
@@ -37,6 +41,8 @@ $("#start-button").on("click", function () {
 $("#correct-button").on("click", function () {
    if(retrievedSubreddit === "TheOnion"){
       console.log("Correct");
+      score++;
+      $("#score").text("Score: " + score);
       var randNum = Math.random() < 0.5 ? 0 : 1;;
       var randNum2 = Math.floor(Math.random() * (24 - 0 + 1)) + 0;
    
@@ -52,6 +58,9 @@ $("#correct-button").on("click", function () {
 $("#wrong-button").on("click", function () {
    if(retrievedSubreddit === "nottheonion"){
       console.log("Correct");
+      score++;
+      $("#score").text("Score: " + score);
+
       var randNum = Math.random() < 0.5 ? 0 : 1;;
       var randNum2 = Math.floor(Math.random() * (24 - 0 + 1)) + 0;
    

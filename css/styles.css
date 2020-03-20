@@ -47,8 +47,8 @@ body, html{
     font-size:20px;
     font-family: 'Press Start 2P', cursive;
     text-decoration:none;
-    margin-right: 120px;
-    width: 200px;
+    margin-right: 6%;
+    width: 250px;
     height: 120px;
 }
 #correct-button:hover {
@@ -61,10 +61,11 @@ body, html{
 	cursor:pointer;
 	color:#ffffff;
     font-family:Arial;
+    font-size:20px;
     font-family: 'Press Start 2P', cursive;
-	font-size:20px;
     text-decoration:none;
-    width: 200px;
+    margin-left: 6%;
+    width: 250px;
     height: 120px;
 }
 #wrong-button:hover {
