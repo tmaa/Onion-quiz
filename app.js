@@ -69,5 +69,6 @@ $("#wrong-button").on("click", function () {
    }else{
       tries--;
       console.log("Wrong");
-      $("#tries").text("Tries: " + tries);   }
+      $("#tries").text("Tries: " + tries);   
+   }
 });
